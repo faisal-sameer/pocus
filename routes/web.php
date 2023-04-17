@@ -23,3 +23,5 @@ Route::get('/Register', [App\Http\Controllers\HomeController::class, 'Register']
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Login', [App\Http\Controllers\HomeController::class, 'Login'])->name('Login');
+Route::get('/DashboardCourse', [App\Http\Controllers\HomeController::class, 'DashboardCourse'])->name('DashboardCourse');

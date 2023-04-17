@@ -15,4 +15,12 @@ class HomeController extends Controller
     {
         return view('Register');
     }
+    protected function Login()
+    {
+        return view('Login');
+    }
+    protected function DashboardCourse()
+    {
+        return view('DashboardCourse');
+    }
 }
