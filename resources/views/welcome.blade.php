@@ -17,6 +17,7 @@ POCUS
 
   <link href="{{ asset('css/app-about.css') }}" rel="stylesheet">
   <script src="{{ asset('script/script.js') }}"></script>
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="width: 100%">
@@ -101,6 +102,40 @@ POCUS
             function Register(){
               window.location.href = '{{ route('Register') }}'; 
             }
+            function Login(){
+              window.location.href = '{{ route('DashboardCourse') }}'; 
+            }
+            </script>
+            <script>
+              // Get the modal
+var modal = document.getElementById("modal");
+
+// Get the button that opens the modal
+var btns = document.getElementsByClassName("open-modal-btn");
+
+// Loop through all buttons and add a click event listener
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    // When the button is clicked, display the modal
+    modal.style.display = "block";
+  });
+}
+
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
             </script>
   </body>
   </html>

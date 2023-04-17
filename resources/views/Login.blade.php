@@ -18,7 +18,7 @@
     <div id="nav-cancel" class="nav-cancel">
       <img src="/image/cancel-button.png" alt="" class="nav-icon">
     </div>
-    <a href="{{ route('Login') }}"  class="nav-link"><h3>Log in</h3></a>
+    <a href="{{ route('Register') }}"  class="nav-link"><h3>Register Course</h3></a>
     <a href="/" class="nav-link"><h3>Home</h3></a>
     <a href="{{ route('AboutCourse') }}" class="nav-link"><h3>The Courses</h3></a>
   </nav>
@@ -29,33 +29,20 @@
     <div class="container" style="direction: ltr">
       
         <div class="notification-dashboard bounce-in-top">
-            <h1>Register</h1>
+            <h1>Log In</h1>
             <hr>
-            <div class="row">
-                <div class="col-sm-3">                  
-                          <input type="text" id="inputregister" name="Name" placeholder="Enter your name">
-                </div>
-                <div class="col-sm-3">                    
-                        <input inputmode="numeric" id="inputregister" name="phone" placeholder="Enter your phone" />
-                 </div>
-                 <div class="col-sm-3">                  
+            <div class="row" id="rowLog">
+                <div class="col-sm-6">                  
                     <input type="text" id="inputregister" name="Email" placeholder="Enter your Email">
           </div>
-                 <div class="col-sm-3">                    
-                    <select name="Cat" class="form-select form-select-lg mb-3" style="width: 80%"
-                    aria-label=".form-select-lg example">
-                    <option selected value="0">Courses</option>
-                  
-                        <option value="1">BASIC POCUS</option>
-                        <option value="2">ADVANCE POCUS </option>
-
-                </select>
-     </div>
-              </div>
-              <div class="row">
+          <div class="col-sm-6">                  
+            <input type="password" id="inputregister" name="Email" placeholder="Enter your Password">
+  </div>
+            </div>
+            <div class="row">
                 <div class="col-sm" style="margin-left: 28% ;margin-top: 5%">
-                  <button type="submit" id="Register" class="btn btn-dark" data-toggle="modal" data-target="#exampl" id="btnmodel">
-                    Register    
+                  <button onclick="Login()" type="submit" id="Register" class="btn btn-dark" data-toggle="modal" data-target="#exampl" id="btnmodel">
+                    Login    
                   </button>
                 </div>
               </div>

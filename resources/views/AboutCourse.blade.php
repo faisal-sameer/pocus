@@ -18,7 +18,7 @@
     <div id="nav-cancel" class="nav-cancel">
       <img src="/image/cancel-button.png" alt="" class="nav-icon">
     </div>
-    <a href=""  class="nav-link"><h3>Log in</h3></a>
+    <a href="{{ route('Login') }}"  class="nav-link"><h3>Log in</h3></a>
     <a href="/" class="nav-link"><h3>Home</h3></a>
   </nav>
 </header>

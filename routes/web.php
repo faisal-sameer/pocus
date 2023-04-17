@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/AboutCourse', [App\Http\Controllers\HomeController::class, 'AboutCourse'])->name('AboutCourse');
 Route::get('/Register', [App\Http\Controllers\HomeController::class, 'Register'])->name('Register');
+Route::get('/Login', [App\Http\Controllers\HomeController::class, 'Login'])->name('Login');
+Route::get('/DashboardCourse', [App\Http\Controllers\HomeController::class, 'DashboardCourse'])->name('DashboardCourse');
