@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Alert;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -33,8 +36,42 @@ class LoginController extends Controller
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function Login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        // Authentication passed...
+
+        $user = Auth::user();
+
+        if ($user->Status == '1') {
+            return redirect()->route('DashboardCourse');
+        } else {
+            auth()->logout();
+
+            Alert::warning('Your Account Not available  !');
+            return redirect()->route('login');
+        
+        }
+    }
+
+    return back()->with('error', 'Invalid login details!');
+}
+public function logout(Request $request)
+{
+    Auth::logout();
+
+    $request->session()->invalidate();
+
+    $request->session()->regenerateToken();
+
+    return redirect('/');
+}
 }

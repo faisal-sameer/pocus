@@ -17,12 +17,6 @@ class CheckUserStatus
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->status != 1) {
-            auth()->logout();
-            Alert::warning('Your Account Not available  !');
-            return redirect()->route('login');
-        }
-    
-        return $next($request);
+        
     }
 }

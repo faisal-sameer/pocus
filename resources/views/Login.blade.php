@@ -36,7 +36,7 @@
 @endsection
 @section('content')
     <div class="container" style="direction: ltr">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('loginS') }}">
             @csrf
 
             <div class="notification-dashboard bounce-in-top">
