@@ -28,16 +28,14 @@
                     <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
                 </div>
             </div>
-            <a href="{{ route('Register') }}" class="nav-link">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 <img src="/image/switch.png" width="50" height="50" alt="" class="nav-icon">
             </a>
         </nav>
     </header>
 
-    <a class="nav-link" href="{{ route('logout') }}"
-        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-        <img src="/image/switch.png" width="50" height="50" alt="" class="nav-icon">
-    </a>
+
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
         @csrf
     </form>
@@ -108,8 +106,7 @@
                                 </lord-icon>
                             </td>
                             <td>
-                                <img id="imglogo" src="/image/hidden.png" width="50" height="30"
-                                    alt="">
+                                <img id="imglogo" src="/image/hidden.png" width="50" height="30" alt="">
                             </td>
                             <td>
                                 <img id="imglogo" src="/image/remove.png" width="50" height="30"

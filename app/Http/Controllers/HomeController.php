@@ -31,6 +31,9 @@ class HomeController extends Controller
     }
         return view('AboutCourse')->with('course',$course);
     }
+    protected function index(){
+        
+    }
     protected function Register()
     {
         $courses = course::where(['Status'=>1])->select('id','title_en')->get();
@@ -50,9 +53,9 @@ class HomeController extends Controller
             $user = new User();
             $user->name = $request->Name;
             $user->email = $request->Email;
-            $user->password = Hash::make(12345);
+            $user->password = Hash::make("12345");
             $user->permission_id = 3;
-            $user->Status = 2;
+            $user->Status = 1;
             $user->save();
         }
         $HaveReg = student::where(['course_id' => $request->course, 'user_id' => $user->id, 'Status' => 1])->first();
