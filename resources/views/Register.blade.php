@@ -17,6 +17,13 @@
             <div id="nav-cancel" class="nav-cancel">
                 <img src="/image/cancel-button.png" alt="" class="nav-icon">
             </div>
+            <div class="w3-dropdown-hover nav-link">
+                <img src="/image/arabic.png" width="50" height="50" alt="" class="nav-icon">
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">English</a>
+                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
+                </div>
+            </div>
             <a href="{{ route('login') }}" class="nav-link">
                 <h3>Log in</h3>
             </a>

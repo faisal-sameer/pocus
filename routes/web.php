@@ -26,6 +26,7 @@ Route::any('/login', [App\Http\Controllers\HomeController::class, 'Login'])->nam
 
 // Owner 
 Route::middleware(['auth', 'checkstatus'])->group(function () {
+    Route::get('/CreateCourse', [App\Http\Controllers\OwnerController::class, 'CreateCourse'])->name('CreateCourse');
 
-Route::any('/DashboardCourse', [App\Http\Controllers\OwnerController::class, 'DashboardCourse'])->name('DashboardCourse');
+    Route::any('/DashboardCourse', [App\Http\Controllers\OwnerController::class, 'DashboardCourse'])->name('DashboardCourse');
 });
