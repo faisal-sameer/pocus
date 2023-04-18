@@ -23,4 +23,8 @@ class HomeController extends Controller
     {
         return view('DashboardCourse');
     }
+    protected function CreateCourse()
+    {
+        return view('CreateCourse');
+    }
 }
