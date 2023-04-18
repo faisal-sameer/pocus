@@ -64,7 +64,7 @@
                     <tbody>
                         <tr>
                             <td>BASIC POCUS</td>
-                            <td>30/35</td>
+                            <td class="open-modal-Capacity-btn">30/35</td>
                             <td>
                                 <lord-icon class="open-modal-btn" src="https://cdn.lordicon.com/ckatldkn.json"
                                     trigger="loop" delay="2000" style="width:80px;height:50px">
@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <td>ADVANCE POCUS</td>
-                            <td>0/0</td>
+                            <td class="open-modal-Capacity-btn">0/0</td>
                             <td>
                                 <lord-icon class="open-modal-btn" src="https://cdn.lordicon.com/ckatldkn.json"
                                     trigger="loop" delay="2000" style="width:80px;height:50px">
@@ -120,6 +120,7 @@
 
 
         </div>
+        {{-- model for info start --}}
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -207,5 +208,53 @@
                 </div>
             </div>
         </div>
+                {{-- model for info end --}}
+        {{-- model for  regestir start--}}
+        <div id="modalCapacity" class="modal">
+            <div class="modal-content">
+                <span class="clo">&times;</span>
+                <div class="notification-dashboard">
+                    <h1>registered</h1>
+                    <div class="notification-container">
+                        <div class="notification shadow-drop-center">
+                            <div class="notification-header">
+                                <h3>
+                                    Ahmad</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                                <span>Phone : </span>
+                                                <p>0540470592</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>Email : </span>
+                                    <p>ahmad@gmail.com</p>
+                    </div>
+                            </div>
+                        </div>
+                        <div class="notification shadow-drop-center">
+                            <div class="notification-header">
+                                <h3>
+                                    Ali</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                                <span>Phone : </span>
+                                                <p>055540654</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>Email : </span>
+                                    <p>Ali@gmail.com</p>
+                    </div>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{-- model for regestir end --}}
+
     </div>
 @endsection
