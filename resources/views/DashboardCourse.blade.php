@@ -1,5 +1,14 @@
 @extends('welcome')
 @section('navbar')
+    <header class="header">
+        <div class="brand">
+            <div id="nav-burger" class="nav-burger is-active">
+                <img src="/image/hamburger-button.png" alt="Menu" class="nav-icon">
+            </div>
+            <a href="/" class="brand-logo">
+                <img id="imglogo" src="/image/logo.png" width="100" height="100" alt="">
+            </a>
+            <div id="nav-search" class="nav-search is-hidden">
 
 <header class="header">
   <div class="brand">
@@ -33,6 +42,15 @@
   </nav>
 </header>
 
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                <img src="/image/switch.png" width="50" height="50" alt="" class="nav-icon">
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </nav>
+    </header>
 @endsection
 @section('content')
     <div class="container" style="direction: ltr">
@@ -51,7 +69,7 @@
                     <th>Hidden</th>
                     <th>Remove</th>
 
-                  </tr>
+                    </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -211,6 +229,6 @@
               
               </div>
             </div>
-          </div>
+        </div>
     </div>
-    @endsection
+@endsection
