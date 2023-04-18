@@ -23,7 +23,7 @@
             <a href="/" class="nav-link">
                 <h3>Home</h3>
             </a>
-            <a href="/" class="nav-link">
+            <a href="/#courses" class="nav-link">
                 <h3>The Courses</h3>
             </a>
         </nav>
