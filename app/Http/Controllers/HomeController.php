@@ -34,10 +34,10 @@ class HomeController extends Controller
     protected function Register()
     {
         $courses = course::where(['Status'=>1])->select('id','title_en')->get();
-        $course = course::where(['id'=>$id,'Status'=>1])->whereHas('students', function ($q) use($id) {
+       /* $coursess = course::where(['id'=>$id,'Status'=>1])->whereHas('students', function ($q) use($id) {
             $q->where('course_id', $id);
             $q->orWhereNull('course_id',null);
-        })->first();
+        })->first();*/
         return view('Register')->with('courses',$courses);
     }
     protected function signToCourse(Request $request)
