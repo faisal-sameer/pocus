@@ -10,6 +10,7 @@
             </a>
             <div id="nav-search" class="nav-search is-hidden">
 
+<<<<<<< HEAD
 <header class="header">
   <div class="brand">
     <div id="nav-burger" class="nav-burger is-active">
@@ -41,6 +42,36 @@
   </nav>
 </header>
 
+=======
+                <img src="/image/cancel-button.png" alt="" id="nav-search-cancel" class="nav-icon">
+            </div>
+        </div>
+        <nav id="nav" class="nav">
+            <div id="nav-cancel" class="nav-cancel">
+                <img src="/image/cancel-button.png" alt="" class="nav-icon">
+            </div>
+            <div class="w3-dropdown-hover nav-link">
+                <img src="/image/arabic.png" width="50" height="50" alt="" class="nav-icon">
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">English</a>
+                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
+                </div>
+            </div>
+            <a href="{{ route('Register') }}" class="nav-link">
+                <h3>Register Course</h3>
+            </a>
+            <a href="{{ route('login') }}" class="nav-link">
+                <h3>Log in</h3>
+            </a>
+            <a href="#about" class="nav-link">
+                <h3>about us</h3>
+            </a>
+            <a href="#courses" class="nav-link">
+                <h3>The Courses</h3>
+            </a>
+        </nav>
+    </header>
+>>>>>>> 1b9adcff0463c83aa25419c63a6468b830fdb8fe
 @endsection
 @section('content')
     <div id="about" style="direction: ltr" class="container-fluid bounce-in-top ">
@@ -48,8 +79,10 @@
             <div class="col-sm-8">
                 <h2>GET TO KNOW US</h2><br>
                 <h4>Learn new medical skills </h4><br>
-                <p>(the name of the website) is a multiple different level courses aim to help you develop the skills you
-                    need to properly use point of care ultrasound, integrate that knowledge into your practice and helping
+                <p>(the name of the website) is a multiple different level courses aim to help you develop the
+                    skills you
+                    need to properly use point of care ultrasound, integrate that knowledge into your practice
+                    and helping
                     doctor to achieve their goal.
                 </p>
             </div>
