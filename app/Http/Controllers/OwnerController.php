@@ -14,5 +14,8 @@ class OwnerController extends Controller
     {
         return view('DashboardCourse');
     }
-
+    protected function CreateCourse()
+    {
+        return view('CreateCourse');
+    }
 }

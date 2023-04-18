@@ -77,8 +77,8 @@ class HomeController extends Controller
         Alert::success('You Have Register To Course :  ' . $course->title_en);
         return  redirect()->route('Home');
     }
-    protected function Login()
+    protected function login()
     {
-        return view('Login');
+        return view('login');
     }
 }

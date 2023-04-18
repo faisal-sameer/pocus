@@ -18,10 +18,10 @@ Route::any('/AboutCourse-{id}', [App\Http\Controllers\HomeController::class, 'Ab
 Route::any('/Register', [App\Http\Controllers\HomeController::class, 'Register'])->name('Register');
 Route::any('/RegisterToCourse', [App\Http\Controllers\HomeController::class, 'signToCourse'])->name('RegisterTC');
 
-Auth::routes();
+//Auth::routes();
 
 Route::any('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::any('/login', [App\Http\Controllers\HomeController::class, 'Login'])->name('login');
+Route::any('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 
 
 // Owner 

@@ -35,7 +35,7 @@
        </div>
      </div>
     <a href="{{ route('Register') }}"  class="nav-link"><h3>Register Course</h3></a>
-     <a href="{{ route('Login') }}"  class="nav-link"><h3>Log in</h3></a>
+     <a href="{{ route('login') }}"  class="nav-link"><h3>Log in</h3></a>
     <a href="#about" class="nav-link"><h3>about us</h3></a>
     <a href="#courses" class="nav-link"><h3>The Courses</h3></a>
   </nav>

@@ -34,7 +34,7 @@
          <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
        </div>
      </div>
-    <a href="{{ route('Login') }}"  class="nav-link"><h3>Log in</h3></a>
+    <a href="{{ route('login') }}"  class="nav-link"><h3>Log in</h3></a>
     <a href="/" class="nav-link"><h3>Home</h3></a>
  
   </nav>
