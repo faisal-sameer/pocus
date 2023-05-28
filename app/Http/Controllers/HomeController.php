@@ -20,28 +20,24 @@ class HomeController extends Controller
     }
     protected function AboutCourse($id)
     {
-        $course = course::where(['id'=>$id,'Status'=>1])->first();
-       if ($course == null) {
-        Alert::warning('This course not avalibel ');
-        return  redirect()->route('Home');
-       }
-       if ($course) {
-        $studentCount = $course->students->count();
-        // do something with the student count
-    }
-        return view('AboutCourse')->with('course',$course);
-    }
-    protected function index(){
-        
+        $course = course::where(['id' => $id, 'Status' => 1])->whereHas('students', function ($q) use ($id) {
+            $q->where('course_id', $id);
+        })->first();
+        if ($course == null) {
+            Alert::warning('لا توجد الدورة ');
+            return  redirect()->route('Home');
+        }
+        if ($course) {
+            $studentCount = $course->students->count();
+            // do something with the student count
+        }
+        return view('AboutCourse')->with('course', $course);
     }
     protected function Register()
     {
-        $courses = course::where(['Status'=>1])->select('id','title_en')->get();
-       /* $coursess = course::where(['id'=>$id,'Status'=>1])->whereHas('students', function ($q) use($id) {
-            $q->where('course_id', $id);
-            $q->orWhereNull('course_id',null);
-        })->first();*/
-        return view('Register')->with('courses',$courses);
+        $courses = course::where(['Status' => 1])->select('id', 'title_en')->get();
+
+        return view('Register')->with('courses', $courses);
     }
     protected function signToCourse(Request $request)
     {
@@ -53,9 +49,9 @@ class HomeController extends Controller
             $user = new User();
             $user->name = $request->Name;
             $user->email = $request->Email;
-            $user->password = Hash::make("12345");
+            $user->password = Hash::make(12345);
             $user->permission_id = 3;
-            $user->Status = 1;
+            $user->Status = 2;
             $user->save();
         }
         $HaveReg = student::where(['course_id' => $request->course, 'user_id' => $user->id, 'Status' => 1])->first();
@@ -84,5 +80,9 @@ class HomeController extends Controller
     protected function login()
     {
         return view('login');
+    }
+    protected function AboutUs()
+    {
+        return view('AboutUs');
     }
 }

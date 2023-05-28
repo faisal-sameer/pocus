@@ -17,20 +17,21 @@
             <div id="nav-cancel" class="nav-cancel">
                 <img src="/image/cancel-button.png" alt="" class="nav-icon">
             </div>
+           {{-- 
             <div class="w3-dropdown-hover nav-link">
                 <img src="/image/arabic.png" width="50" height="50" alt="" class="nav-icon">
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a style="text-align: center" href="#" class="w3-bar-item w3-button">English</a>
                     <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
                 </div>
-            </div>
+            </div>comment --}}
             <a href="{{ route('Register') }}" class="nav-link">
                 <h3>Register Course</h3>
             </a>
             <a href="{{ route('login') }}" class="nav-link">
                 <h3>Log in</h3>
             </a>
-            <a href="#about" class="nav-link">
+            <a href="{{ route('AboutUs') }}" class="nav-link">
                 <h3>about us</h3>
             </a>
             <a href="#courses" class="nav-link">
@@ -96,6 +97,34 @@
 
         </div>
     </div>
+    <div  class="container-fluid" style="text-align: left;direction: ltr">
+
+    <div class="notification-dashboard slideanim">
+      <div class="row" style="margin-left: 3%;margin-bottom: 1%">
+        <h3>
+            For feedback and complaints
+                </h3>
+      </div>
+        <div class="row">
+         
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Note"rows="5" required></textarea><br>
+        <div class="row">
+            <div class="col-sm" style="margin-left: 28% ;margin-top: 1%">
+                <button onclick="Login()" type="submit" id="Register" class="btn btn-dark" data-toggle="modal"
+                    data-target="#exampl" id="btnmodel">
+                    Login
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
 @endsection
 @section('script')
     <script>
@@ -103,4 +132,20 @@
             window.location.href = '/AboutCourse-' + id;
         }
     </script>
+ 
+      <script>
+       var x = 0;
+        var images = new Array("/image/p1.png","/image/p2.jpeg");
+        var i = setInterval(auto, 3000);
+
+        function auto()
+          {
+            x++;
+            if (x == images.length)
+               x=0;
+            document.getElementById('im').src=images[x];      
+          }
+              </script>
+
+              
 @endsection

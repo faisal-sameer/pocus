@@ -20,8 +20,8 @@
             <div class="w3-dropdown-hover nav-link">
                 <img src="/image/arabic.png" width="50" height="50" alt="" class="nav-icon">
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">English</a>
-                    <a style="text-align: center" href="#" class="w3-bar-item w3-button">عربي</a>
+                    <a style="text-align: center" href="#" onclick="setLanguage('en')" class="w3-bar-item w3-button">English</a>
+                    <a style="text-align: center" href="#" onclick="setLanguage('ar')" class="w3-bar-item w3-button">عربي</a>
                 </div>
             </div>
             <a href="{{ route('login') }}" class="nav-link">
@@ -34,7 +34,7 @@
     </header>
 @endsection
 @section('content')
-    <div class="container" style="direction: ltr">
+    <div class="container"  style="direction: ltr">
 
         <div class="notification-dashboard">
             <h1>{{ $course->title_en }}</h1>

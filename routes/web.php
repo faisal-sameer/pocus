@@ -23,6 +23,7 @@ Route::any('/', [App\Http\Controllers\HomeController::class, 'Home'])->name('Hom
 Route::any('/AboutCourse-{id}', [App\Http\Controllers\HomeController::class, 'AboutCourse'])->name('AboutCourse');
 Route::any('/Register', [App\Http\Controllers\HomeController::class, 'Register'])->name('Register');
 Route::any('/RegisterToCourse', [App\Http\Controllers\HomeController::class, 'signToCourse'])->name('RegisterTC');
+Route::any('/AboutUs', [App\Http\Controllers\HomeController::class, 'AboutUs'])->name('AboutUs');
 
 
 Route::any('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
